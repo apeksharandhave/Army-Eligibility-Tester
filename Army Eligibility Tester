@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    float height, weight;
+    char education[50];
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter your height in cm: ");
+    scanf("%f", &height);
+
+    printf("Enter your weight in kg: ");
+    scanf("%f", &weight);
+
+    printf("Enter your highest education: ");
+    scanf("%s", education);
+
+    // Checking eligibility criteria
+    if(age >= 17 && age <= 23 && height >= 160 && weight >= 50) {
+        if(education[0] != '\0') {
+            printf("\nCongratulations! You are eligible to apply for the Army.\n");
+        } else {
+            printf("\nYou are not eligible due to educational qualification.\n");
+        }
+    } else {
+        printf("\nSorry! You do not meet the eligibility criteria for the Army.\n");
+    }
+
+    return 0;
+}
